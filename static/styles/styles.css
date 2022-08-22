@@ -1,0 +1,106 @@
+:root {
+    --background-col: #F5F5F5 /*White Smoke*/;
+    --foreground-col: #400910;
+    --input-color: #19204C;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 13vh;
+    max-width: 900px;
+    background-color: var(--background-col);
+}
+
+#logo {
+    width: 153px;
+}
+
+main {
+    margin-top: 2vh;
+}
+
+#title-heading {
+    font-size: 3rem;
+    margin-bottom: 2vh;
+    color: var(--foreground-col);
+}
+
+.input-col {
+    width: 100%;
+    border-bottom: 2px solid var(--foreground-col);
+    font-size: 1rem;
+    margin: 1.5vh 0;
+    padding: 0 0 0.2em 0.2em;
+    background-color: var(--background-col);
+    outline: none;
+    color: var(--input-color);
+    font-weight: bold;
+}
+
+#checkbox {
+    margin: 0.4vh 0 0 2px;
+    display: grid;
+    grid-template-columns: 1em auto;
+    align-items: center;
+    gap: 0.5em;
+}
+
+#inside-giki-label {
+    font-size: 1rem;
+    font-weight: bolder;
+    color: var(--foreground-col);
+}
+
+#inside-giki {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: var(--foreground-col);
+    width: 1em;
+    height: 1em;
+    border: 0.15em solid var(--foreground-col);
+    border-radius: 0.15em;
+    display: grid;
+    place-content: center;
+}
+
+#inside-giki::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--input-color);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+#inside-giki:checked::before {
+    transform: scale(1);
+}
+
+#search-button {
+    font-size: 1.1rem;
+    color: var(--background-col);
+    width: 100.79%;
+    padding: 0.4em 0;
+    background-color: var(--foreground-col);
+}
+
+#message {
+    color: red;
+    font-size: 1rem;
+    font-weight: lighter;
+    margin: 1em auto;
+    text-align: center;
+}
