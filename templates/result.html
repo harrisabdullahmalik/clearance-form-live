@@ -1,0 +1,165 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Clearance Form</title>
+  <link rel="icon" type="image/png" href="Images/stock1.jpg" />
+  <meta name="viewport" content="width=device-width initial-state=1" />
+
+  <!-- Latest compiled and minified CSS -->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous"
+  />
+
+  <!-- Optional theme -->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous"
+  />
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"
+  ></script>
+
+  <style>
+    * {
+        font-size: 14px;
+    }
+  </style>
+</head>
+<body
+  data-new-gr-c-s-check-loaded="14.1074.0"
+  data-gr-ext-installed=""
+  cz-shortcut-listen="true"
+>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <div class="container-fluid">
+    <div class="page panel-heading">
+      <h3 class="text-center">
+        GIK Institute of Engineering Sciences &amp; Technology
+      </h3>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3"></div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="panel panel-primary">
+          <div class="panel panel-heading">Spring-2022 Ranking</div>
+          <div lass="panel-body">
+            <div class="bg-danger">
+              <p></p>
+            </div>
+            <form class="form-group-sm" action="" method="POST">
+              <table class="table bg-success">
+                <tbody>
+                  <tr>
+                    <td class="text text-center"></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <td>Registration No.</td>
+                    <td id="reg_no">{{ reg_no }}</td>
+                  </tr>
+                  <tr>
+                    <td>Name</td>
+                    <td id="name">{{ name }}</td>
+                  </tr>
+                  <tr>
+                    <td>Program</td>
+                    <td id="program">{{ program }}</td>
+                  </tr>
+                  <tr class="bg-danger">
+                    <td>SGPA</td>
+                    <td id="sgpa">{{ sgpa }}</td>
+                  </tr>
+                  <tr class="bg-danger">
+                    <td>CGPA</td>
+                    <td id="cgpa">{{ cgpa }}</td>
+                  </tr>
+                  <tr class="bg-primary">
+                    <td>SGPA Rank (Batchwise)</td>
+                    <td id="s_rank_b">{{ s_rank_b }}</td>
+                  </tr>
+                  <tr>
+                    <td>CGPA Rank (Batchwise)</td>
+                    <td id="c_rank_b">{{ c_rank_b }}</td>
+                  </tr>
+                  <tr class="bg-primary">
+                    <td>SGPA Rank (Porgramwise)</td>
+                    <td id="s_rank_p">{{ s_rank_p }}</td>
+                  </tr>
+                  <tr>
+                    <td>CGPA Rank (Porgramwise)</td>
+                    <td id="c_rank_p">{{ c_rank_p }}</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div align="center">
+                <a
+                  href="logout.php"
+                  class="btn btn-danger"
+                  style="width: 200px"
+                >
+                  <span class="glyphicon glyphicon-log-out"></span> Logout</a
+                >
+                <div style="margin-top: 50px"></div></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      style="
+        display: none;
+        position: fixed;
+        top: 30px;
+        width: auto;
+        max-width: 100%;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 99999999;
+      "
+    >
+      <div
+        style="
+          display: inline-block;
+          font-size: 10px;
+          font-weight: bold;
+          border: 1px solid rgb(240, 195, 109);
+          background-color: rgb(249, 237, 190);
+          padding: 0px 10px;
+          border-radius: 2px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
+        "
+      ></div>
+    </div>
+  </div>
+  <div id="forest-ext-shadow-host"></div>
+  <iframe
+    frameborder="0"
+    scrolling="no"
+    style="background-color: transparent; border: 0px; display: none"
+  ></iframe>
+  <div
+    id="GOOGLE_INPUT_CHEXT_FLAG"
+    input=""
+    input_stat='{"tlang":true,"tsbc":true,"pun":true,"mk":true,"ss":true}'
+    style="display: none"
+  ></div>
+</body>
