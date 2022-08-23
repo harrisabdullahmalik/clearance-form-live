@@ -17,9 +17,9 @@ def index(request):
         location = login_data.get("inside-giki")
         birth_year = int(reg_no[0:4]) - 19
 
-        # op = webdriver.ChromeOptions()
-        # op.add_argument('headless')
-        # driver = webdriver.Chrome(ChromeDriverManager().install(), options=op)
+        op = webdriver.ChromeOptions()
+        op.add_argument('headless')
+        driver = webdriver.Chrome(ChromeDriverManager().install(), options=op)
         return HttpResponse(f"{birth_year}")
         #
         # count = 1
