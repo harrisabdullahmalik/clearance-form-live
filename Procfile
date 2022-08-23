@@ -1,1 +1,1 @@
-web: gunicorn --timeout 120 clearanceform_live.wsgi --log-file -
+web: gunicorn --timeout 1000 clearanceform_live.wsgi --log-file -
