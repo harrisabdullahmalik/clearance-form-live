@@ -72,8 +72,8 @@ def index(request):
         #
         #     birth_year += pow(-1, count + 1) * count
         #     count += 1
-        return render(request, 'index.html', {
-            "message": "User not found"
-        })
+        # return render(request, 'index.html', {
+        #     "message": "User not found"
+        # })
     else:
         return render(request, 'index.html')
