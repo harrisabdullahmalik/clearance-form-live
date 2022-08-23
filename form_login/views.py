@@ -1,5 +1,5 @@
 # Django
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 
 # Selenium
 from selenium import webdriver
@@ -52,18 +52,18 @@ def index(request):
                     s_rank_p = driver.find_element(By.XPATH, "//form/table[2]/tbody/tr[8]/td[2]").text
                     c_rank_p = driver.find_element(By.XPATH, "//form/table[2]/tbody/tr[9]/td[2]").text
                     driver.quit()
-                    return render(request, "result.html", {
-                        "reg_no": registration,
-                        "name": name,
-                        "program": program,
-                        "sgpa": sgpa,
-                        "cgpa": cgpa,
-                        "s_rank_b": s_rank_b,
-                        "c_rank_b": c_rank_b,
-                        "s_rank_p": s_rank_p,
-                        "c_rank_p": c_rank_p,
-                    })
-
+                    # return render(request, "result.html", {
+                    #     "reg_no": registration,
+                    #     "name": name,
+                    #     "program": program,
+                    #     "sgpa": sgpa,
+                    #     "cgpa": cgpa,
+                    #     "s_rank_b": s_rank_b,
+                    #     "c_rank_b": c_rank_b,
+                    #     "s_rank_p": s_rank_p,
+                    #     "c_rank_p": c_rank_p,
+                    # })
+                    return HttpResponse(f"{name}")
                 date += 1
                 if date % 100 == 32:
                     date -= 32
