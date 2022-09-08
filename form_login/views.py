@@ -1,11 +1,13 @@
 # Django
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
 # Selenium
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import WebDriverException
+from selenium.webdriver.chrome.service import Service
+
 
 # Create your views here.
 
@@ -19,7 +21,7 @@ def index(request):
 
         op = webdriver.ChromeOptions()
         op.add_argument('headless')
-        driver = webdriver.Chrome(ChromeDriverManager().install(), options=op)
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=op)
 
         count = 1
         while count < 6:
@@ -41,7 +43,8 @@ def index(request):
                 password.send_keys(date)
                 driver.find_element(By.NAME, "bt1").click()
 
-                if driver.current_url == "http://clearance2.giki.edu.pk:8005/ranks/ranks.php":
+                if driver.current_url == "http://clearance2.giki.edu.pk:8005/ranks/ranks.php" or \
+                   driver.current_url == "http://clearance.giki.edu.pk:82/ranks/ranks.php":
                     registration = driver.find_element(By.XPATH, "//form/table[2]/tbody/tr[1]/td[2]").text
                     name = driver.find_element(By.XPATH, "//form/table[2]/tbody/tr[2]/td[2]").text
                     program = driver.find_element(By.XPATH, "//form/table[2]/tbody/tr[3]/td[2]").text
@@ -52,6 +55,8 @@ def index(request):
                     s_rank_p = driver.find_element(By.XPATH, "//form/table[2]/tbody/tr[8]/td[2]").text
                     c_rank_p = driver.find_element(By.XPATH, "//form/table[2]/tbody/tr[9]/td[2]").text
                     driver.quit()
+                    date = str(date)
+                    print(f"Date of birth: {date[6:8]}/{date[4:6]}/{date[0:4]}")
                     return render(request, "result.html", {
                         "reg_no": registration,
                         "name": name,
